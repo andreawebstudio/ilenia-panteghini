@@ -401,7 +401,9 @@ body.nav-open{overflow:hidden}
 .faq-q[aria-expanded="true"] .faq-icon::after{transform:translate(-50%,-50%) rotate(0)}
 .faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--ease)}
 .faq-a > div{overflow:hidden}
-.faq-a p{margin:0;padding:0 3.5rem 1.6rem .25rem;font-size:.98rem}
+.faq-a p{margin:0;padding:0 3.5rem .75rem .25rem;font-size:.98rem}
+.faq-a p:last-child{padding-bottom:1.6rem}
+@media (max-width:560px){.faq-a p{padding-right:.25rem}}
 .faq-item.open .faq-a{grid-template-rows:1fr}
 
 /* ---------- Contatti: form ---------- */
@@ -512,7 +514,7 @@ body.nav-open{overflow:hidden}
       </ul>
     </nav>
     <!-- Quando sarà disponibile il link ufficiale del calendario, sostituire href="#contatti" -->
-    <a class="btn btn-primary header-cta" href="#contatti">Prenota una consulenza</a>
+    <a class="btn btn-primary header-cta" href="#contatti" data-topic="Chiamata conoscitiva">Prenota la chiamata</a>
     <button class="burger" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Apri il menu">
       <span></span>
     </button>
@@ -529,7 +531,7 @@ body.nav-open{overflow:hidden}
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#contatti">Contatti</a></li>
   </ul>
-  <a class="btn btn-primary" href="#contatti">Prenota una consulenza</a>
+  <a class="btn btn-primary" href="#contatti" data-topic="Chiamata conoscitiva">Prenota la chiamata conoscitiva</a>
 </div>
 
 <main id="main">
@@ -551,7 +553,7 @@ body.nav-open{overflow:hidden}
     <p class="lead">Un percorso di crescita personale per coltivare autostima, consapevolezza e un dialogo interiore più gentile, imparando a riconoscere il tuo valore e a vivere con maggiore intenzionalità.</p>
     <div class="cta-row">
       <!-- Quando sarà disponibile il link ufficiale del calendario, sostituire href="#contatti" -->
-      <a class="btn btn-primary" href="#contatti">Prenota una consulenza</a>
+      <a class="btn btn-primary" href="#contatti" data-topic="Chiamata conoscitiva">Prenota la chiamata conoscitiva</a>
       <a class="btn btn-secondary" href="#servizi">Scopri i miei servizi</a>
     </div>
   </div>
@@ -819,7 +821,7 @@ body.nav-open{overflow:hidden}
 
     <div class="cta-end reveal">
       <!-- Quando sarà disponibile il link ufficiale del calendario, sostituire href="#contatti" -->
-      <a class="btn btn-primary" href="#contatti">Prenota una consulenza</a>
+      <a class="btn btn-primary" href="#contatti" data-topic="Chiamata conoscitiva">Prenota la chiamata conoscitiva</a>
     </div>
   </div>
 </section>
@@ -830,30 +832,34 @@ body.nav-open{overflow:hidden}
     <div class="sec-head reveal">
       <span class="eyebrow">Come funziona</span>
       <h2 id="come-title">Ogni cambiamento comincia <em>da un primo passo.</em></h2>
+      <p class="lead">Non devi sapere già quale percorso fa per te: si parte sempre da una chiamata conoscitiva, per ascoltarti e scegliere insieme la strada giusta.</p>
       <svg class="sprig" aria-hidden="true"><use href="#sprig"/></svg>
     </div>
     <ol class="steps" id="steps">
       <li class="step">
         <span class="step-num" aria-hidden="true">01</span>
-        <h3>Scegli quando incontrarci</h3>
-        <p>Seleziona il giorno e l'orario disponibili per la consulenza strategica online.</p>
+        <h3>Scrivimi</h3>
+        <p>Compila il breve modulo scegliendo “Chiamata conoscitiva” e raccontami in due righe cosa cerchi.</p>
       </li>
       <li class="step">
         <span class="step-num" aria-hidden="true">02</span>
-        <h3>Conferma la prenotazione</h3>
-        <p>Compila il modulo con i dati richiesti per completare la prenotazione.</p>
+        <h3>Fissiamo la chiamata</h3>
+        <p>Ti ricontatto io personalmente per trovare insieme il giorno e l'orario più comodi per te.</p>
       </li>
       <li class="step">
         <span class="step-num" aria-hidden="true">03</span>
-        <h3>Iniziamo a conoscerci</h3>
-        <p>Durante la consulenza di 45 minuti potremo confrontarci sulle tue esigenze.</p>
+        <h3>Ci conosciamo</h3>
+        <p>In circa 45 minuti ti ascolto, mi racconti cosa stai vivendo e cosa desideri, e io ti spiego come lavoro.</p>
       </li>
       <li class="step">
         <span class="step-num" aria-hidden="true">04</span>
-        <h3>Scegli il tuo percorso</h3>
-        <p>Se lo desideri, valutiamo insieme il percorso più adatto a te, come Radici di Autostima o il counseling olistico.</p>
+        <h3>Scegliamo il tuo percorso</h3>
+        <p>Valutiamo insieme il percorso più adatto a te tra quelli che propongo, nei tempi e nei modi giusti per te.</p>
       </li>
     </ol>
+    <div class="cta-end reveal">
+      <a class="btn btn-primary" href="#contatti" data-topic="Chiamata conoscitiva">Prenota la chiamata conoscitiva</a>
+    </div>
   </div>
 </section>
 
@@ -865,8 +871,8 @@ body.nav-open{overflow:hidden}
       <h2 id="dove-title">Uno spazio di ascolto, <em>anche a distanza.</em></h2>
     </div>
     <div class="where reveal">
-      <p>La Consulenza Strategica si svolge <strong>online</strong> e ha una durata di 45 minuti.</p>
-      <p>Per conoscere le modalità dei percorsi e le disponibilità aggiornate, puoi contattarmi direttamente.</p>
+      <p>Lavoro <strong>online</strong>: puoi incontrarmi da casa tua, ovunque ti trovi. La chiamata conoscitiva dura circa 45 minuti.</p>
+      <p>Durante la chiamata ti racconto come si svolgono i percorsi e quali sono le disponibilità aggiornate.</p>
       <div class="where-card">
         <svg viewBox="0 0 58 58" aria-hidden="true">
           <circle cx="29" cy="29" r="28" fill="none" stroke="currentColor" stroke-width="1" opacity=".4"/>
@@ -877,7 +883,7 @@ body.nav-open{overflow:hidden}
         <div>
           <span class="k">Online</span>
           <span class="v">Ovunque tu sia</span>
-          <span class="s">Consulenza Strategica online · 45 minuti</span>
+          <span class="s">Chiamata conoscitiva online · circa 45 minuti</span>
         </div>
       </div>
     </div>
@@ -893,25 +899,47 @@ body.nav-open{overflow:hidden}
     </div>
     <div class="faq reveal">
       <div class="faq-item">
-        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">A chi si rivolge Radici di Autostima?<span class="faq-icon" aria-hidden="true"></span></button></h3>
-        <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1"><div><p>Ho ideato Radici di Autostima per le donne che desiderano lavorare sulla propria autostima, sviluppare maggiore consapevolezza emotiva e coltivare un dialogo interiore più gentile.</p></div></div>
+        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">Non so quale percorso fa per me: da dove inizio?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1"><div><p>Dalla chiamata conoscitiva. Non serve arrivare con le idee chiare: è proprio lo spazio in cui ti ascolto, capisco cosa stai vivendo e ti propongo il percorso più adatto a te in questo momento.</p></div></div>
       </div>
       <div class="faq-item">
-        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">Quanto dura il percorso Radici di Autostima?<span class="faq-icon" aria-hidden="true"></span></button></h3>
-        <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><div><p>Il percorso che propongo dura 90 giorni. Se vuoi conoscere le modalità organizzative e i contenuti nello specifico, puoi scrivermi direttamente: sarò felice di raccontarteli.</p></div></div>
+        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">Com'è la chiamata conoscitiva?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><div><p>È un incontro online di circa 45 minuti. Mi racconti di te, di cosa senti il bisogno e di cosa desideri cambiare; io ti spiego come lavoro e ti presento i percorsi. Alla fine valutiamo insieme se e da dove partire, con calma e senza fretta.</p></div></div>
       </div>
       <div class="faq-item">
-        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">Che cos'è la Consulenza Strategica?<span class="faq-icon" aria-hidden="true"></span></button></h3>
-        <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3"><div><p>È un incontro online di 45 minuti in cui ci confrontiamo sulle tue esigenze e in cui ti presento i percorsi che offro, così da capire insieme quale può essere più adatto a te.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">Che cosa intendi per manifestazione?<span class="faq-icon" aria-hidden="true"></span></button></h3>
-        <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><div><p>Nella mia visione, manifestare significa coltivare consapevolezza rispetto ai propri desideri, alle convinzioni personali e alle scelte quotidiane. La considero una prospettiva di crescita personale e spirituale, non una garanzia che i desideri si realizzino automaticamente.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">Come posso prenotare una consulenza?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">Come prenoto la chiamata?<span class="faq-icon" aria-hidden="true"></span></button></h3>
         <!-- Quando sarà disponibile il link ufficiale del calendario, inserirlo in questa risposta -->
-        <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5"><div><p>Puoi scegliere un giorno e un orario disponibili nel mio calendario di prenotazione e compilare il modulo richiesto. Se preferisci, puoi anche scrivermi attraverso il <a href="#contatti">modulo di contatto</a>: ti risponderò io personalmente.</p></div></div>
+        <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3"><div><p>Compila il <a href="#contatti" data-topic="Chiamata conoscitiva">modulo di contatto</a> scegliendo “Chiamata conoscitiva” come argomento: ti ricontatto io personalmente per fissare giorno e orario.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">Che differenza c'è tra i percorsi?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><div>
+          <p><strong>Radici di Autostima</strong> (90 giorni) è il percorso completo, per un lavoro profondo e graduale sull'autostima e sul dialogo interiore.</p>
+          <p><strong>Percorso di Autostima</strong> (21 giorni) è un primo passo più breve e concreto, ideale se vuoi iniziare.</p>
+          <p><strong>Percorso Afrodite</strong> (21 giorni) è dedicato all'energia femminile e al rapporto con il tuo corpo e la tua femminilità.</p>
+          <p><strong>Diario della Gratitudine</strong> (90 giorni) è un programma quotidiano di scrittura per trasformare la gratitudine in un'abitudine.</p>
+          <p>Il <strong>counseling olistico</strong> è invece uno spazio di ascolto individuale, e la <strong>lettura delle rune</strong> una lettura personalizzata a partire dal tuo nome e cognome.</p>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">Come si svolgono i percorsi?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5"><div><p>Lavoro online, quindi puoi seguirmi ovunque tu sia. Modalità, tempi e costi di ciascun percorso li vediamo insieme durante la chiamata conoscitiva, così puoi scegliere con tutte le informazioni.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a6" id="faq-q6">Il counseling olistico è una terapia?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6"><div><p>No. Il counseling olistico è un percorso di ascolto e di crescita personale: non è psicoterapia e non sostituisce il supporto di psicologi, psicoterapeuti o medici. Se stai attraversando un momento di sofferenza importante, ti consiglio di rivolgerti a un professionista sanitario.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a7" id="faq-q7">Come funziona la lettura delle rune?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a7" role="region" aria-labelledby="faq-q7"><div><p>Mi servono solo il tuo nome e cognome. A partire dalle rune del Futhark esploriamo la Runa del Nome, la Runa del Cognome e il Sigillo Energetico. Non è una previsione del futuro: è uno strumento di riflessione per conoscerti meglio e scegliere con più consapevolezza.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a8" id="faq-q8">Che cosa intendi per manifestazione?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a8" role="region" aria-labelledby="faq-q8"><div><p>Nella mia visione, manifestare significa coltivare consapevolezza rispetto ai propri desideri, alle convinzioni personali e alle scelte quotidiane. La considero una prospettiva di crescita personale e spirituale, non una garanzia che i desideri si realizzino automaticamente.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a9" id="faq-q9">Cosa trovo sul canale Telegram?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a9" role="region" aria-labelledby="faq-q9"><div><p>Test di autovalutazione gratuiti, video e contenuti esclusivi con consigli e strategie pratiche. È un buon modo per conoscermi e iniziare a lavorare su di te anche prima della chiamata. <a href="https://t.me/ile_autostimamanifestazione" target="_blank" rel="noopener">Entra nel canale</a>.</p></div></div>
       </div>
     </div>
   </div>
@@ -984,12 +1012,12 @@ body.nav-open{overflow:hidden}
           <label for="f-arg">Argomento *</label>
           <select id="f-arg" name="argomento" required>
             <option value="" selected disabled>Seleziona</option>
+            <option>Chiamata conoscitiva</option>
             <option>Radici di Autostima</option>
             <option>Diario della Gratitudine</option>
             <option>Percorso di Autostima (21 giorni)</option>
             <option>Percorso Afrodite</option>
             <option>Lettura delle Rune</option>
-            <option>Consulenza Strategica</option>
             <option>Counseling olistico</option>
             <option>Informazioni generali</option>
           </select>
