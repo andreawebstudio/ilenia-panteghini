@@ -432,6 +432,12 @@ body.nav-open{overflow:hidden}
 .field .consent{display:flex;gap:.7rem;align-items:flex-start;font-size:.8rem;font-weight:400;letter-spacing:0;line-height:1.55;margin:0;cursor:pointer}
 .consent input{flex:none;width:20px;height:20px;margin:.1rem 0 0;accent-color:var(--teal)}
 .form-card .btn{width:100%;margin-top:.4rem}
+.contact-quick{max-width:580px;margin:0 auto}
+.btn-wa{width:100%;background:#1F7A55;color:#fff;font-size:.82rem}   /* verde WhatsApp scurito: contrasto AA con testo bianco */
+.btn-wa:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.btn-wa svg{width:22px;height:22px;flex:none}
+.or{display:flex;align-items:center;gap:1rem;margin:1.6rem 0;font-size:.74rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--rosewood)}
+.or::before,.or::after{content:"";flex:1;height:1px;background:var(--line-rose)}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .form-status{margin:1rem 0 0;font-size:.88rem;text-align:center;min-height:1.4em;color:var(--teal);font-weight:500}
 .form-status.err{color:var(--rosewood)}
@@ -444,7 +450,8 @@ body.nav-open{overflow:hidden}
 .f-motto{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.35rem,2.6vw,1.75rem);color:#fff;margin:2rem auto 1.6rem;line-height:1.35}
 .f-ig{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:500;font-size:.92rem;min-height:44px}
 .f-ig svg{width:20px;height:20px}
-.f-social{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 2rem}
+.f-social{display:flex;flex-direction:column;align-items:center;gap:.15rem}
+.f-ig{word-break:break-all}
 .f-ig:hover span{text-decoration:underline;text-underline-offset:4px}
 .f-links{list-style:none;margin:2.2rem auto 0;padding:1.8rem 0 0;border-top:1px solid rgba(255,255,255,.18);display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 1.6rem;max-width:900px}
 .f-links a{text-decoration:none;font-size:.8rem;letter-spacing:.04em;display:inline-block;padding:.45rem 0;color:rgba(255,255,255,.9)}
@@ -486,6 +493,14 @@ body.nav-open{overflow:hidden}
       <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
       <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.5"/>
       <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/>
+    </symbol>
+    <symbol id="wa" viewBox="0 0 24 24">
+      <path d="M3.5 20.5l1.2-4.3A8.5 8.5 0 1 1 8 19.4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M9 7.8c.3-.4.7-.4 1-.1l.9 1.6c.2.3.1.7-.1 1l-.5.5c.5 1.2 1.5 2.2 2.7 2.8l.5-.5c.3-.3.7-.3 1-.1l1.6.9c.3.2.4.7.1 1-.6.8-1.5 1.1-2.4.8-2.6-.9-4.6-2.9-5.5-5.4-.3-.9 0-1.8.7-2.5z" fill="currentColor"/>
+    </symbol>
+    <symbol id="mail" viewBox="0 0 24 24">
+      <rect x="3" y="5.5" width="18" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
     </symbol>
     <symbol id="tg" viewBox="0 0 24 24">
       <path d="M21 4.2 2.9 11.1c-.8.3-.8 1.4 0 1.7l4.5 1.6 1.7 5.3c.2.7 1.1.9 1.6.4l2.5-2.4 4.6 3.4c.6.4 1.4.1 1.6-.6L22.3 5.4c.2-.8-.6-1.5-1.3-1.2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
@@ -839,7 +854,7 @@ body.nav-open{overflow:hidden}
       <li class="step">
         <span class="step-num" aria-hidden="true">01</span>
         <h3>Scrivimi</h3>
-        <p>Compila il breve modulo scegliendo “Chiamata conoscitiva” e raccontami in due righe cosa cerchi.</p>
+        <p>Mandami un messaggio su WhatsApp o compila il breve modulo, raccontandomi in due righe cosa cerchi.</p>
       </li>
       <li class="step">
         <span class="step-num" aria-hidden="true">02</span>
@@ -909,7 +924,7 @@ body.nav-open{overflow:hidden}
       <div class="faq-item">
         <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">Come prenoto la chiamata?<span class="faq-icon" aria-hidden="true"></span></button></h3>
         <!-- Quando sarà disponibile il link ufficiale del calendario, inserirlo in questa risposta -->
-        <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3"><div><p>Compila il <a href="#contatti" data-topic="Chiamata conoscitiva">modulo di contatto</a> scegliendo “Chiamata conoscitiva” come argomento: ti ricontatto io personalmente per fissare giorno e orario.</p></div></div>
+        <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3"><div><p>Scrivimi su <a href="https://wa.me/393339799282" target="_blank" rel="noopener">WhatsApp</a> oppure compila il <a href="#contatti" data-topic="Chiamata conoscitiva">modulo di contatto</a> scegliendo “Chiamata conoscitiva” come argomento: ti ricontatto io personalmente per fissare giorno e orario.</p></div></div>
       </div>
       <div class="faq-item">
         <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">Che differenza c'è tra i percorsi?<span class="faq-icon" aria-hidden="true"></span></button></h3>
@@ -919,6 +934,13 @@ body.nav-open{overflow:hidden}
           <p><strong>Percorso Afrodite</strong> (21 giorni) è dedicato all'energia femminile e al rapporto con il tuo corpo e la tua femminilità.</p>
           <p><strong>Diario della Gratitudine</strong> (90 giorni) è un programma quotidiano di scrittura per trasformare la gratitudine in un'abitudine.</p>
           <p>Il <strong>counseling olistico</strong> è invece uno spazio di ascolto individuale, e la <strong>lettura delle rune</strong> una lettura personalizzata a partire dal tuo nome e cognome.</p>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a10" id="faq-q10">I percorsi che proponi li hai sperimentati tu?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a10" role="region" aria-labelledby="faq-q10"><div>
+          <p>Sì. Ogni percorso che propongo l'ho prima <strong>testato personalmente</strong>, su di me: non ti chiedo nulla che io non abbia vissuto in prima persona.</p>
+          <p>Anche le pratiche che condivido nei miei video fanno parte del <strong>mio quotidiano</strong>: sono gli strumenti che uso ogni giorno per prendermi cura di me, ed è da lì che nasce il desiderio di portarli anche a te.</p>
         </div></div>
       </div>
       <div class="faq-item">
@@ -990,11 +1012,20 @@ body.nav-open{overflow:hidden}
       <span class="eyebrow">Contatti</span>
       <h2 id="contatti-title">Il tuo primo passo <em>può iniziare da qui.</em></h2>
     </div>
+    <div class="contact-quick reveal">
+      <a class="btn btn-wa" href="https://wa.me/393339799282?text=Ciao%20Ilenia%2C%20ti%20scrivo%20dal%20tuo%20sito%3A%20vorrei%20prenotare%20la%20chiamata%20conoscitiva%20gratuita." target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#wa"/></svg>Scrivimi su WhatsApp<span class="sr-only"> (si apre in una nuova scheda)</span>
+      </a>
+      <p class="or" aria-hidden="true"><span>oppure</span></p>
+    </div>
     <!--
-      FORM: per renderlo operativo inserire nell'attributo data-endpoint l'URL del servizio di invio
-      (es. Formspree, Getform o uno script PHP sul proprio hosting). Senza endpoint il modulo non invia dati.
+      FORM: i messaggi vengono inoltrati da FormSubmit (formsubmit.co) a ilenia.panteghini@gmail.com.
+      Al primo invio FormSubmit manda a quella casella una mail di attivazione da confermare.
     -->
-    <form class="form-card reveal" id="contact-form" data-endpoint="" novalidate>
+    <form class="form-card reveal" id="contact-form" data-endpoint="https://formsubmit.co/ajax/ilenia.panteghini@gmail.com" novalidate>
+      <input type="hidden" name="_subject" value="Nuova richiesta dal sito ilenia-panteghini">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
       <div class="form-grid">
         <div class="field">
           <label for="f-nome">Nome *</label>
@@ -1054,6 +1085,12 @@ body.nav-open{overflow:hidden}
     </div>
     <p class="f-motto">Torna alle tue radici. Riscopri il tuo valore.</p>
     <div class="f-social">
+      <a class="f-ig" href="https://wa.me/393339799282" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#wa"/></svg><span>+39 333 979 9282</span><span class="sr-only">(WhatsApp, si apre in una nuova scheda)</span>
+      </a>
+      <a class="f-ig" href="mailto:ilenia.panteghini@gmail.com">
+        <svg aria-hidden="true"><use href="#mail"/></svg><span>ilenia.panteghini@gmail.com</span>
+      </a>
       <a class="f-ig" href="https://www.instagram.com/ilenia_counseling_olistico_/" target="_blank" rel="noopener">
         <svg aria-hidden="true"><use href="#ig"/></svg><span>@ilenia_counseling_olistico_</span><span class="sr-only">(si apre in una nuova scheda)</span>
       </a>
@@ -1183,9 +1220,10 @@ body.nav-open{overflow:hidden}
       }
       var btn=form.querySelector('button[type=submit]'); btn.disabled=true;
       fetch(endpoint,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
-        .then(function(r){if(!r.ok)throw new Error(r.status);
+        .then(function(r){if(!r.ok)throw new Error(r.status);return r.json().catch(function(){return {};});})
+        .then(function(j){if(j&&String(j.success)==='false')throw new Error(j.message||'invio non riuscito');
           form.reset(); status.textContent='Grazie! Ho ricevuto il tuo messaggio e ti risponderò al più presto.';})
-        .catch(function(){status.className='form-status err';status.textContent='Si è verificato un problema durante l\'invio. Riprova tra poco.';})
+        .catch(function(){status.className='form-status err';status.innerHTML='Si è verificato un problema durante l\'invio. Riprova tra poco oppure scrivimi a <a href="mailto:ilenia.panteghini@gmail.com">ilenia.panteghini@gmail.com</a>.';})
         .finally(function(){btn.disabled=false;});
     });
   }
